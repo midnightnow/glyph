@@ -1,0 +1,70 @@
+[debug] [2026-02-28T11:27:11.867Z] ----------------------------------------------------------------------
+[debug] [2026-02-28T11:27:11.871Z] Command:       /opt/homebrew/Cellar/node/25.6.1/bin/node /opt/homebrew/bin/firebase deploy --only hosting --project glyph
+[debug] [2026-02-28T11:27:11.871Z] CLI Version:   14.15.2
+[debug] [2026-02-28T11:27:11.871Z] Platform:      darwin
+[debug] [2026-02-28T11:27:11.871Z] Node Version:  v25.6.1
+[debug] [2026-02-28T11:27:11.871Z] Time:          Sat Feb 28 2026 21:27:11 GMT+1000 (Australian Eastern Standard Time)
+[debug] [2026-02-28T11:27:11.871Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2026-02-28T11:27:11.872Z] >>> [apiv2][query] GET https://firebase-public.firebaseio.com/cli.json [none]
+[debug] [2026-02-28T11:27:11.982Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2026-02-28T11:27:11.983Z] > authorizing via signed-in user (dallasm@gmail.com)
+[debug] [2026-02-28T11:27:11.983Z] [iam] checking project glyph for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2026-02-28T11:27:11.983Z] Checked if tokens are valid: false, expires at: 1771514137803
+[debug] [2026-02-28T11:27:11.983Z] Checked if tokens are valid: false, expires at: 1771514137803
+[debug] [2026-02-28T11:27:11.983Z] > refreshing access token with scopes: []
+[debug] [2026-02-28T11:27:11.983Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2026-02-28T11:27:11.983Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2026-02-28T11:27:12.359Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2026-02-28T11:27:12.359Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2026-02-28T11:27:12.379Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/glyph:testIamPermissions [none]
+[debug] [2026-02-28T11:27:12.380Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/glyph:testIamPermissions x-goog-quota-user=projects/glyph
+[debug] [2026-02-28T11:27:12.380Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/glyph:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2026-02-28T11:27:12.513Z] <<< [apiv2][status] GET https://firebase-public.firebaseio.com/cli.json 200
+[debug] [2026-02-28T11:27:12.513Z] <<< [apiv2][body] GET https://firebase-public.firebaseio.com/cli.json {"cloudBuildErrorAfter":1594252800000,"cloudBuildWarnAfter":1590019200000,"defaultNode10After":1594252800000,"minVersion":"3.0.5","node8DeploysDisabledAfter":1613390400000,"node8RuntimeDisabledAfter":1615809600000,"node8WarnAfter":1600128000000}
+[debug] [2026-02-28T11:27:14.299Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/glyph:testIamPermissions 200
+[debug] [2026-02-28T11:27:14.299Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/glyph:testIamPermissions {}
+[debug] [2026-02-28T11:27:14.300Z] [iam] error while checking permissions, command may fail: Authorization failed. This account is missing the following required permissions on project glyph:
+
+  firebase.projects.get
+  firebasehosting.sites.update
+[debug] [2026-02-28T11:27:14.300Z] Checked if tokens are valid: true, expires at: 1772281631360
+[debug] [2026-02-28T11:27:14.300Z] Checked if tokens are valid: true, expires at: 1772281631360
+[debug] [2026-02-28T11:27:14.300Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/glyph [none]
+[debug] [2026-02-28T11:27:15.240Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/glyph 403
+[debug] [2026-02-28T11:27:15.240Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/glyph {"error":{"code":403,"message":"The caller does not have permission","status":"PERMISSION_DENIED"}}
+[debug] [2026-02-28T11:27:15.241Z] Request to https://firebase.googleapis.com/v1beta1/projects/glyph had HTTP Error: 403, The caller does not have permission
+[debug] [2026-02-28T11:27:15.641Z] FirebaseError: Request to https://firebase.googleapis.com/v1beta1/projects/glyph had HTTP Error: 403, The caller does not have permission
+    at responseToError (/opt/homebrew/lib/node_modules/firebase-tools/lib/responseToError.js:52:12)
+    at RetryOperation._fn (/opt/homebrew/lib/node_modules/firebase-tools/lib/apiv2.js:312:77)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+[error] 
+[error] Error: Failed to get Firebase project glyph. Please make sure the project exists and your account has permission to access it.
+[debug] [2026-02-28T11:32:39.578Z] ----------------------------------------------------------------------
+[debug] [2026-02-28T11:32:39.581Z] Command:       /opt/homebrew/Cellar/node/25.6.1/bin/node /opt/homebrew/bin/firebase deploy --only hosting --project glyph
+[debug] [2026-02-28T11:32:39.581Z] CLI Version:   14.15.2
+[debug] [2026-02-28T11:32:39.581Z] Platform:      darwin
+[debug] [2026-02-28T11:32:39.581Z] Node Version:  v25.6.1
+[debug] [2026-02-28T11:32:39.581Z] Time:          Sat Feb 28 2026 21:32:39 GMT+1000 (Australian Eastern Standard Time)
+[debug] [2026-02-28T11:32:39.581Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2026-02-28T11:32:39.658Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2026-02-28T11:32:39.658Z] > authorizing via signed-in user (dallasm@gmail.com)
+[debug] [2026-02-28T11:32:39.658Z] [iam] checking project glyph for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2026-02-28T11:32:39.659Z] Checked if tokens are valid: true, expires at: 1772281631360
+[debug] [2026-02-28T11:32:39.659Z] Checked if tokens are valid: true, expires at: 1772281631360
+[debug] [2026-02-28T11:32:39.659Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/glyph:testIamPermissions [none]
+[debug] [2026-02-28T11:32:39.659Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/glyph:testIamPermissions x-goog-quota-user=projects/glyph
+[debug] [2026-02-28T11:32:39.659Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/glyph:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2026-02-28T11:32:40.410Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/glyph:testIamPermissions 200
+[debug] [2026-02-28T11:32:40.410Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/glyph:testIamPermissions {}
+[debug] [2026-02-28T11:32:40.410Z] [iam] error while checking permissions, command may fail: Authorization failed. This account is missing the following required permissions on project glyph:
+
+  firebase.projects.get
+  firebasehosting.sites.update
+[debug] [2026-02-28T11:32:40.410Z] Checked if tokens are valid: true, expires at: 1772281631360
+[debug] [2026-02-28T11:32:40.410Z] Checked if tokens are valid: true, expires at: 1772281631360
+[debug] [2026-02-28T11:32:40.410Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/glyph [none]
+[debug] [2026-02-28T11:32:41.542Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/glyph 403
+[debug] [2026-02-28T11:32:41.542Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/glyph {"error":{"code":403,"message":"The caller does not have permission","status":"PERMISSION_DENIED"}}
+[debug] [2026-02-28T11:32:41.542Z] Request to https://firebase.googleapis.com/v1beta1/projects/glyph had HTTP Error: 403, The caller does not have permission
