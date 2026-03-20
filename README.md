@@ -1,7 +1,7 @@
-# VORTEX-13: The Alphabet Resonance Map
+# GLYPH-13: The Alphabet Resonance Map
 ## Euclidean Mechanics of the 26-Vector System
 
-Vortex-13 is a research project and interactive visualization tool that demonstrates the geometric periodicity of the Latin alphabet. By mapping the 26 letters onto a **13-node bipolar wheel** anchored by the **5-12-13 Pythagorean triple**, the project reveals that language is a self-organizing vector field with predictive semantic properties.
+GLYPH-13 is a research project and interactive visualization tool that demonstrates the geometric periodicity of the Latin alphabet. By mapping the 26 letters onto a **13-node bipolar wheel** anchored by the **5-12-13 Pythagorean triple**, the project reveals that language is a self-organizing vector field with predictive semantic properties.
 
 ## 🎯 Key Discoveries
 - **The 5-12-13 Engine**: Provenance of the 13-node wheel as a geometric necessity for circular closure.
